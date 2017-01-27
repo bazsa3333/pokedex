@@ -112,7 +112,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        var poke: Pokemon!
         
+        if inSearchMode {
+            
+            poke = filteredPokemon[indexPath.row]
+            
+        } else {
+            
+            poke = pokemons[indexPath.row]
+            
+        }
+        
+        performSegue(withIdentifier: "PokemonDeatilVC", sender: poke)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "PokemonDeatilVC" {
+            
+            if let detailsVC = segue.destination as? PokemonDeatilVC {
+                
+                if let poke = sender as? Pokemon {
+                    
+                    detailsVC.pokemon = poke
+                    
+                }
+                
+            }
+            
+        }
         
     }
     

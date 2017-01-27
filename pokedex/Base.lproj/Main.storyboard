@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H27-TA-Xqr">
-                                        <rect key="frame" x="140.5" y="17" width="95" height="40"/>
+                                        <rect key="frame" x="140" y="17" width="95" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MZv-07-oot"/>
                                         </constraints>
@@ -140,11 +140,42 @@
                     <connections>
                         <outlet property="collection" destination="omm-22-bfz" id="PxP-r1-xz4"/>
                         <outlet property="searchBar" destination="y2D-Tu-Ory" id="18E-6l-X8L"/>
+                        <segue destination="1Pu-YF-pRb" kind="show" identifier="PokemonDeatilVC" id="fdH-Ag-hFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Pokemon DeatilVC-->
+        <scene sceneID="RJu-DZ-spL">
+            <objects>
+                <viewController id="1Pu-YF-pRb" customClass="PokemonDeatilVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ice-za-c8m"/>
+                        <viewControllerLayoutGuide type="bottom" id="9GE-Cq-jS7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zaj-Jm-57G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-Y1-wvo">
+                                <rect key="frame" x="97" y="288" width="181" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.28235294119999998" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="OfP-Y1-wvo" id="Qeq-df-phh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eY-G1-KOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
